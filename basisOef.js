@@ -50,9 +50,19 @@ const toestellen = [
  * res: wasmachine, droogkast
  */
 
+const toestellenNaastElkaar = toestellen.map((toestel) => {
+  return toestel.benaming
+}).join(', ')
+
+console.log(toestellenNaastElkaar);
 
 
 /**
  * Geef het id + toestel + probleem van de problemen die nog niet zijn opgelost
  * res: 2 - droogkast - filter stuk
  */
+
+const nietOpgelostToestel = toestellen.map((toestel) => {
+  return toestel.onderhoud
+    
+})
