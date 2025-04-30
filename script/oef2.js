@@ -50,7 +50,21 @@ toestellen.forEach((toestel) => {
   toestel.onderhoud.forEach((onderhoud) => {
     if (!onderhoud.opgelost) {
       const taak = document.createElement("div");
-    
+      taak.textContent = `${toestel.benaming} - ${onderhoud.omschrijving}`;
+
+      const checkbox = document.createElement("input")
+      checkbox.type = "checkbox"
+      checkbox.addEventListener("change", function () {
+        if (this.checked) {
+          afgehandeldDiv.appendChild(taak)
+          taak.style.color = "red"
+        } else {
+          taak.style.color = "black"
+        }
+      })
+
+      todoDiv.appendChild(checkbox)
+      todoDiv.appendChild(taak)
     }
   })
 })
