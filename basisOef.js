@@ -64,5 +64,9 @@ console.log(toestellenNaastElkaar);
 
 const nietOpgelostToestel = toestellen.map((toestel) => {
   return toestel.onderhoud
-    
+    .filter((onderhoud) => !onderhoud.opgelost)
+    .map((onderhoud) => `${toestel.id} - ${toestel.benaming} - ${onderhoud.omschrijving}`)
 })
+
+const nietOpgelost = nietOpgelostToestel.flat()
+nietOpgelost.forEach((probleem) => console.log(probleem))

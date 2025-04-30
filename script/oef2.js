@@ -42,3 +42,15 @@ const toestellen = [
     ],
   },
 ];
+
+const todoDiv = document.querySelector("#todo")
+const afgehandeldDiv = document.querySelector("#afgehandeld")
+
+toestellen.forEach((toestel) => {
+  toestel.onderhoud.forEach((onderhoud) => {
+    if (!onderhoud.opgelost) {
+      const taak = document.createElement("div");
+    
+    }
+  })
+})
